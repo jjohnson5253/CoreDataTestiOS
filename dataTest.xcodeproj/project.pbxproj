@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		711A0CA120250CE10069FAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A0CA020250CE10069FAD0 /* AppDelegate.swift */; };
-		711A0CA320250CE10069FAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A0CA220250CE10069FAD0 /* ViewController.swift */; };
 		711A0CA620250CE10069FAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711A0CA420250CE10069FAD0 /* Main.storyboard */; };
 		711A0CA820250CE10069FAD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711A0CA720250CE10069FAD0 /* Assets.xcassets */; };
 		711A0CAB20250CE10069FAD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711A0CA920250CE10069FAD0 /* LaunchScreen.storyboard */; };
+		711A0CBE20250E260069FAD0 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 711A0CBC20250E260069FAD0 /* CoreDataDemo.xcdatamodeld */; };
+		711A0CC020250E3E0069FAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A0CBF20250E3E0069FAD0 /* ViewController.swift */; };
+		711A0CC220250E430069FAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A0CC120250E430069FAD0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		711A0C9D20250CE10069FAD0 /* dataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		711A0CA020250CE10069FAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		711A0CA220250CE10069FAD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		711A0CA520250CE10069FAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		711A0CA720250CE10069FAD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		711A0CAA20250CE10069FAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		711A0CAC20250CE10069FAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		711A0CBD20250E260069FAD0 /* CoreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo.xcdatamodel; sourceTree = "<group>"; };
+		711A0CBF20250E3E0069FAD0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../CoreDataDemo/CoreDataDemo/ViewController.swift; sourceTree = "<group>"; };
+		711A0CC120250E430069FAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../CoreDataDemo/CoreDataDemo/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,13 @@
 		711A0C9F20250CE10069FAD0 /* dataTest */ = {
 			isa = PBXGroup;
 			children = (
-				711A0CA020250CE10069FAD0 /* AppDelegate.swift */,
-				711A0CA220250CE10069FAD0 /* ViewController.swift */,
 				711A0CA420250CE10069FAD0 /* Main.storyboard */,
 				711A0CA720250CE10069FAD0 /* Assets.xcassets */,
+				711A0CC120250E430069FAD0 /* AppDelegate.swift */,
+				711A0CBF20250E3E0069FAD0 /* ViewController.swift */,
 				711A0CA920250CE10069FAD0 /* LaunchScreen.storyboard */,
 				711A0CAC20250CE10069FAD0 /* Info.plist */,
+				711A0CBC20250E260069FAD0 /* CoreDataDemo.xcdatamodeld */,
 			);
 			path = dataTest;
 			sourceTree = "<group>";
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					711A0C9C20250CE10069FAD0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				711A0CA320250CE10069FAD0 /* ViewController.swift in Sources */,
-				711A0CA120250CE10069FAD0 /* AppDelegate.swift in Sources */,
+				711A0CC220250E430069FAD0 /* AppDelegate.swift in Sources */,
+				711A0CC020250E3E0069FAD0 /* ViewController.swift in Sources */,
+				711A0CBE20250E260069FAD0 /* CoreDataDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +279,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3M935826C;
 				INFOPLIST_FILE = dataTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakejohnson.dataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3M935826C;
 				INFOPLIST_FILE = dataTest/Info.plist;
@@ -322,6 +330,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		711A0CBC20250E260069FAD0 /* CoreDataDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				711A0CBD20250E260069FAD0 /* CoreDataDemo.xcdatamodel */,
+			);
+			currentVersion = 711A0CBD20250E260069FAD0 /* CoreDataDemo.xcdatamodel */;
+			name = CoreDataDemo.xcdatamodeld;
+			path = ../../CoreDataDemo/CoreDataDemo/CoreDataDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 711A0C9520250CE10069FAD0 /* Project object */;
 }
